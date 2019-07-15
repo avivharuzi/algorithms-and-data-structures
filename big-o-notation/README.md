@@ -34,4 +34,4 @@ The logarithm of a number roughly measures the number of times you can divide th
 * O(log n)
 * O(n)
 * O(nlog n)
-* O(n2)
+* O(n^2)
