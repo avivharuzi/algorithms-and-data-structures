@@ -1,2 +1,3 @@
-# algorithms-and-data-structure
-Implementation of Algorithms and Data Structure using JS
+# Algorithms And Data Structure
+
+Implementation of Algorithms and Data Structure using JS.
