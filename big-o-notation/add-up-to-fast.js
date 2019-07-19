@@ -8,3 +8,7 @@
 function addUpTo(n) {
   return n * (n + 1) / 2;
 }
+
+console.log(addUpTo(10)); // 55
+console.log(addUpTo(50)); // 1275
+console.log(addUpTo(100)); // 5050
