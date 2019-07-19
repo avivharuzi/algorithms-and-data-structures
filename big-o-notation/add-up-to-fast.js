@@ -1,6 +1,6 @@
 /**
  * Calculate from 0 up to the number is given.
- * The fast way.
+ * Time Complexity - O(1)
  *
  * @param {number} n
  * @return {number}
