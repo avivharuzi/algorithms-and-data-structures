@@ -1,6 +1,6 @@
 /**
- * Calculates the sum of all numbers from 1 up to (and including) some number n
- * Time Complexity - O(n)
+ * Calculates the sum of all numbers from 1 up to (and including) some number n.
+ * Time Complexity - O(n).
  *
  * @param {number} n
  * @return {number}
