@@ -1,5 +1,5 @@
 /**
- * Sum numbers starting from num using recursion
+ * Sum numbers starting from num using recursion.
  *
  * @param {number} num
  * @return {number}

@@ -1,5 +1,5 @@
 /**
- * Helper method recursion
+ * Helper method recursion.
  *
  * @param {array} arr
  * @return {array}
@@ -30,7 +30,7 @@ function collectOddValues(arr) {
 console.log(collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9])); // [1, 3, 5, 7, 9]
 
 /**
- * Pure recursion
+ * Pure recursion.
  *
  * @param {array} arr
  */
