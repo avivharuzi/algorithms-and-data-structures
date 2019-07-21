@@ -4,22 +4,22 @@
  * If the value is not found, return -1.
  * Time Complexity - O(log n).
  *
- * @param {array} array
+ * @param {array} arr
  * @param {number} val
  * @return {number}
  */
-function search(array, val) {
-  let min = 0;
-  let max = array.length - 1;
+function search(arr, val) {
+  let left = 0;
+  let right = arr.length - 1;
 
-  while (min <= max) {
-    let middle = Math.floor((min + max) / 2);
-    let currentElement = array[middle];
+  while (left <= right) {
+    let middle = Math.floor((left + right) / 2);
+    let currentElement = arr[middle];
 
     if (currentElement < val) {
-      min = middle + 1;
+      left = middle + 1;
     } else if (currentElement > val) {
-      max = middle - 1;
+      right = middle - 1;
     } else {
       return middle;
     }
