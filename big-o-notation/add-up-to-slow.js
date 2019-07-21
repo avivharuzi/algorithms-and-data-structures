@@ -1,14 +1,14 @@
 /**
- * Calculates the sum of all numbers from 1 up to (and including) some number n.
+ * Calculates the sum of all numbers from 1 up to (and including) some number num.
  * Time Complexity - O(n).
  *
- * @param {number} n
+ * @param {number} num
  * @return {number}
  */
-function addUpTo(n) {
+function addUpTo(num) {
   let total = 0;
 
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= num; i++) {
     total += i;
   }
 

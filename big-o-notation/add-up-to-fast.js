@@ -1,12 +1,12 @@
 /**
- * Calculates the sum of all numbers from 1 up to (and including) some number n.
+ * Calculates the sum of all numbers from 1 up to (and including) some number num.
  * Time Complexity - O(1).
  *
- * @param {number} n
+ * @param {number} num
  * @return {number}
  */
-function addUpTo(n) {
-  return n * (n + 1) / 2;
+function addUpTo(num) {
+  return num * (num + 1) / 2;
 }
 
 console.log(addUpTo(10)); // 55
