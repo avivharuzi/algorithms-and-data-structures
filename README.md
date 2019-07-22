@@ -8,4 +8,5 @@ Implementation of Algorithms and Data Structures using JS.
 * [Problem Solving Aproach](problem-solving-aproach)
 * [Problem Solving Patterns](problem-solving-patterns)
 * [Recursion](recursion)
-* [Searching Algorithms](searching-algorithms)
+* [Searching](searching)
+* [Sorting](sorting)
