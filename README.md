@@ -10,3 +10,4 @@ Implementation of Algorithms and Data Structures using JS.
 * [Recursion](recursion)
 * [Searching](searching)
 * [Sorting](sorting)
+* [Data Structures](data-structures)
