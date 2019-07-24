@@ -5,7 +5,7 @@
  * @return {object}
  */
 function stringifyNumbers(obj) {
-  var newObj = {};
+  const newObj = {};
 
   for (let key in obj) {
     if (typeof obj[key] === 'number') {

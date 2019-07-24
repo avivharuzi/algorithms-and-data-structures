@@ -9,7 +9,7 @@ function bubbleSort(arr) {
     for (let j = 0; j < i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         // Swap numbers
-        var temp = arr[j];
+        const temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
       }
@@ -29,14 +29,14 @@ console.log(bubbleSort([37, 45, 29, 8, 12, 88, 100, -3])); // [-3, 8, 12, 29, 37
  */
 function bubbleSort(arr) {
   for (let i = arr.length; i > 0; i--) {
-    var noSwaps;
+    let noSwaps;
 
     for (let j = 0; j < i - 1; j++) {
       noSwaps = true;
 
       if (arr[j] > arr[j + 1]) {
         // Swap numbers
-        var temp = arr[j];
+        const temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
         noSwaps = false;
