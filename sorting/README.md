@@ -2,6 +2,15 @@
 
 Sorting is the process of rearranging the items in a collection (e.g. an array) so that the items are in some kind of order.
 
+## Content
+
+* [Bubble Sort](bubble-sort)
+* [Selection Sort](selection-sort)
+* [Insertion Sort](insertion-sort)
+* [Merge Sort](merge-sort)
+* [Quick Sort](quick-sort)
+* [Radix Sort](radix-sort)
+
 ## Examples
 
 * Sorting numbers from smallest to largest
