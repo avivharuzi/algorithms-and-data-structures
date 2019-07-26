@@ -19,7 +19,7 @@ Linked Lists consist of nodes, and each node has a value and a pointer to anothe
 
 ## Big O of Singly Linked Lists
 
-* Insertion - O(1)
-* Removal - It depends.... O(1) or O(N)
-* Searching - O(N)
-* Access - O(N)
+* Insertion - o(1)
+* Removal - It depends.... o(1) or o(n)
+* Searching - o(n)
+* Access - o(n)
