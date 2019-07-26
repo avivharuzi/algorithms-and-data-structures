@@ -4,7 +4,7 @@ Almost identical to Singly Linked Lists, except every node has another pointer, 
 
 ## Big O of Doubly Linked Lists
 
-* Insertion - o(1)
-* Removal - o(1)
-* Searching - o(n)
-* Access - o(n)
+* Insertion - O(1)
+* Removal - O(1)
+* Searching - O(n)
+* Access - O(n)
