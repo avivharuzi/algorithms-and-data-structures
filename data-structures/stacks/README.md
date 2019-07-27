@@ -9,6 +9,11 @@ The last element added to the stack will be the first element removed from the s
 * Undo / Redo
 * Routing (the history object) is treated like a stack!
 
+## Building Stacks with Array
+
+* push, pop
+* unshift, shift
+
 ## Big O of Stacks
 
 * Insertion - O(1)

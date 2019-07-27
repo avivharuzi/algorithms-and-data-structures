@@ -16,7 +16,7 @@ class Node {
 /**
  * @class
  */
-class Stack {
+class Queue {
   /**
    * @constructor
    */
@@ -30,32 +30,31 @@ class Stack {
   }
 
   /**
-   * Add a value to the top of the stack.
+   * Adding to the beginning of the Queue.
    *
    * @param {any} val
-   * @return {nunber}
+   * @return {number}
    */
-  push(val) {
+  enqueue(val) {
     const newNode = new Node(val);
 
     if (!this.first) {
       this.first = newNode;
       this.last = newNode;
     } else {
-      const currentFirst = this.first;
-      this.first = newNode;
-      this.first.next = currentFirst;
+      this.last.next = newNode;
+      this.last = newNode;
     }
 
     return ++this.length;
   }
 
   /**
-   * Remove a value from the top of the stack.
+   * Removing from the beginning of the Queue.
    *
    * @return {null|any}
    */
-  pop() {
+  dequeue() {
     if (!this.first) {
       return null;
     }
