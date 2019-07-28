@@ -4,10 +4,10 @@
 class Node {
   /**
    * @constructor
-   * @param {any} val
+   * @param {any} value
    */
-  constructor(val) {
-    this.val = val;
+  constructor(value) {
+    this.value = value;
     /** @member {null|Node} */
     this.next = null;
     /** @member {null|Node} */
@@ -34,11 +34,11 @@ class DoublyLinkedList {
   /**
    * Adding a node to the end of the Doubly Linked List.
    *
-   * @param {any} val
+   * @param {any} value
    * @return {DoublyLinkedList}
    */
-  push(val) {
-    const newNode = new Node(val);
+  push(value) {
+    const newNode = new Node(value);
 
     if (this.length === 0) {
       this.head = newNode;
@@ -109,11 +109,11 @@ class DoublyLinkedList {
   /**
    * Adding a node to the beginning of the Doubly Linked List.
    *
-   * @param {any} val
+   * @param {any} value
    * @return {DoublyLinkedList}
    */
-  unshift(val) {
-    const newNode = new Node(val);
+  unshift(value) {
+    const newNode = new Node(value);
 
     if (this.length === 0) {
       this.head = newNode;
@@ -169,17 +169,17 @@ class DoublyLinkedList {
    * Replacing the value of a node to the in a Doubly Linked List.
    *
    * @param {number} index
-   * @param {any} val
+   * @param {any} value
    * @return {boolean}
    */
-  set(index, val) {
+  set(index, value) {
     let foundNode = this.get(index);
 
     if (!foundNode) {
       return false;
     }
 
-    foundNode.val = val;
+    foundNode.value = value;
 
     return true;
   }
@@ -188,25 +188,25 @@ class DoublyLinkedList {
    * Adding a node in a Doubly Linked List by a certain position.
    *
    * @param {number} index
-   * @param {any} val
+   * @param {any} value
    * @return {boolean}
    */
-  insert(index, val) {
+  insert(index, value) {
     if (index < 0 || index > this.length) {
       return false;
     }
 
     if (index === 0) {
-      this.unshift(val);
+      this.unshift(value);
       return true;
     }
 
     if (index === this.length) {
-      this.push(val);
+      this.push(value);
       return true;
     }
 
-    const newNode = new Node(val);
+    const newNode = new Node(value);
     const beforeNode = this.get(index - 1);
     const afterNode = beforeNode.next;
 

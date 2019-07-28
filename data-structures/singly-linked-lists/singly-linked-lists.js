@@ -4,10 +4,10 @@
 class Node {
   /**
    * @constructor
-   * @param {any} val
+   * @param {any} value
    */
-  constructor(val) {
-    this.val = val;
+  constructor(value) {
+    this.value = value;
     /** @member {null|Node} */
     this.next = null;
   }
@@ -32,11 +32,11 @@ class SinglyLinkedList {
   /**
    * Adding a new node to the end of the Linked List.
    *
-   * @param {any} val
+   * @param {any} value
    * @return {SinglyLinkedList}
    */
-  push(val) {
-    const newNode = new Node(val);
+  push(value) {
+    const newNode = new Node(value);
 
     if (!this.head) {
       this.head = newNode;
@@ -107,11 +107,11 @@ class SinglyLinkedList {
   /**
    * Adding a new node to the beginning of the Linked List.
    *
-   * @param {any} val
+   * @param {any} value
    * @return {undefined|Node}
    */
-  unshift(val) {
-    let newNode = new Node(val);
+  unshift(value) {
+    let newNode = new Node(value);
 
     if (!this.head) {
       this.head = newNode;
@@ -152,17 +152,17 @@ class SinglyLinkedList {
    * Changing the value of a node based on it's position in the Linked List.
    *
    * @param {number} index
-   * @param {any} val
+   * @param {any} value
    * @return {boolean}
    */
-  set(index, val) {
+  set(index, value) {
     let foundNode = this.get(index);
 
     if (!foundNode) {
       return false;
     }
 
-    foundNode.val = val;
+    foundNode.value = value;
 
     return true;
   }
@@ -171,25 +171,25 @@ class SinglyLinkedList {
    * Adding a node to the Linked List at a specific position.
    *
    * @param {number} index
-   * @param {any} val
+   * @param {any} value
    * @return {boolean}
    */
-  insert(index, val) {
+  insert(index, value) {
     if (index < 0 || index > this.length) {
       return false;
     }
 
     if (index === this.length) {
-      this.push(val);
+      this.push(value);
       return true;
     }
 
     if (index === 0) {
-      this.unshift(val);
+      this.unshift(value);
       return true;
     }
 
-    let newNode = new Node(val);
+    let newNode = new Node(value);
     let prevNode = this.get(index - 1);
     let prevNodeNext = prevNode.next;
 

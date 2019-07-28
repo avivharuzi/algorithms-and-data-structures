@@ -4,10 +4,10 @@
 class Node {
   /**
    * @constructor
-   * @param {any} val
+   * @param {any} value
    */
-  constructor(val) {
-    this.val = val;
+  constructor(value) {
+    this.value = value;
     /** @member {null|Node} */
     this.next = null;
   }
@@ -32,11 +32,11 @@ class Stack {
   /**
    * Add a value to the top of the stack.
    *
-   * @param {any} val
+   * @param {any} value
    * @return {nunber}
    */
-  push(val) {
-    const newNode = new Node(val);
+  push(value) {
+    const newNode = new Node(value);
 
     if (!this.first) {
       this.first = newNode;
@@ -70,6 +70,6 @@ class Stack {
 
     this.length--;
 
-    return currentFirst.val;
+    return currentFirst.value;
   }
 }

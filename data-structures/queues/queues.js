@@ -4,10 +4,10 @@
 class Node {
   /**
    * @constructor
-   * @param {any} val
+   * @param {any} value
    */
-  constructor(val) {
-    this.val = val;
+  constructor(value) {
+    this.value = value;
     /** @member {null|Node} */
     this.next = null;
   }
@@ -32,11 +32,11 @@ class Queue {
   /**
    * Adding to the beginning of the Queue.
    *
-   * @param {any} val
+   * @param {any} value
    * @return {number}
    */
-  enqueue(val) {
-    const newNode = new Node(val);
+  enqueue(value) {
+    const newNode = new Node(value);
 
     if (!this.first) {
       this.first = newNode;
@@ -69,6 +69,6 @@ class Queue {
 
     this.length--;
 
-    return currentFirst.val;
+    return currentFirst.value;
   }
 }
