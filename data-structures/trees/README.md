@@ -16,7 +16,7 @@ Lists are linear and Trees are nonlinear.
 * Leaf - A node with no children
 * Edge - The connection between one node and another
 
-## Kind Of Trees
+## Kind of Trees
 
 * Trees
 * Binary Trees
@@ -30,3 +30,8 @@ Lists are linear and Trees are nonlinear.
 * Artificial Intelligence
 * Folders in Operating Systems
 * Computer File Systems
+
+## Traversing a Tree
+
+* Breadth-first Search
+* Depth-first Search

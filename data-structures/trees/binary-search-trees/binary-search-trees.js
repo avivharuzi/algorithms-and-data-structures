@@ -120,4 +120,99 @@ class BinarySearchTree {
 
     return false;
   }
+
+  /**
+   * @return {array}
+   */
+  breadthFirstSearch() {
+    let currentNode = this.root,
+      data = [],
+      queue = [];
+
+    queue.push(currentNode);
+
+    while (queue.length) {
+      currentNode = queue.shift();
+      data.push(currentNode);
+
+      if (currentNode.left !== null) {
+        queue.push(currentNode.left);
+      }
+
+      if (currentNode.right !== null) {
+        queue.push(currentNode.right);
+      }
+    }
+
+    return data;
+  }
+
+  /**
+   * @return {array}
+   */
+  depthFirstPreOrder() {
+    let data = [];
+
+    function traverse(node) {
+      data.push(node);
+
+      if (node.left !== null) {
+        traverse(node.left);
+      }
+
+      if (node.right !== null) {
+        traverse(node.right);
+      }
+    }
+
+    traverse(this.root);
+
+    return data;
+  }
+
+    /**
+   * @return {array}
+   */
+  depthFirstPostOrder() {
+    let data = [];
+
+    function traverse(node) {
+      if (node.left !== null) {
+        traverse(node.left);
+      }
+
+      if (node.right !== null) {
+        traverse(node.right);
+      }
+
+      data.push(node);
+    }
+
+    traverse(this.root);
+
+    return data;
+  }
+
+      /**
+   * @return {array}
+   */
+  depthFirstInOrder() {
+    let data = [];
+
+    function traverse(node) {
+      if (node.left !== null) {
+        traverse(node.left);
+      }
+
+      data.push(node);
+
+      if (node.right !== null) {
+        traverse(node.right);
+      }
+    }
+
+    traverse(this.root);
+
+    return data;
+  }
 }
