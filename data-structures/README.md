@@ -8,3 +8,4 @@ Data structures are collections of values, the relationships among them, and the
 * [Doubly Linked Lists](doubly-linked-lists)
 * [Stacks](stacks)
 * [Queues](queues)
+* [Trees](trees)
