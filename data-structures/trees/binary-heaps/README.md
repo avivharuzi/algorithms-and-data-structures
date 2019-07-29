@@ -21,6 +21,6 @@ A data structure where each element has a priority. Elements with higher priorit
 
 ## Big O of Binary Heaps
 
-Insertion - O(log n)
-Removal - O(log n)
-Search - O(n)
+* Insertion - O(log n)
+* Removal - O(log n)
+* Search - O(n)
