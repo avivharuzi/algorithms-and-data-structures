@@ -9,3 +9,4 @@ Data structures are collections of values, the relationships among them, and the
 * [Stacks](stacks)
 * [Queues](queues)
 * [Trees](trees)
+* [Hash Tables](hash-tables)
