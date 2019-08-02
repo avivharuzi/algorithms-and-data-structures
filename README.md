@@ -5,7 +5,7 @@ Implementation of Algorithms and Data Structures using JS.
 ## Content
 
 * [Big O Notation](big-o-notation)
-* [Problem Solving Aproach](problem-solving-aproach)
+* [Problem Solving Approach](problem-solving-approach)
 * [Problem Solving Patterns](problem-solving-patterns)
 * [Recursion](recursion)
 * [Searching](searching)
