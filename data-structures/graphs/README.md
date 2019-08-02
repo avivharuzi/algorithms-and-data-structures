@@ -30,3 +30,25 @@ A graph data structure consists of a finite (and possibly mutable) set of vertic
 * Takes up more space (in sparse graphs)
 * Slower to iterate over all edges
 * Faster to lookup specific edge
+
+## Graph Traversal
+
+Visiting/Updating/Checking each vertex in a graph.
+
+### Graph Traversal Uses
+
+* Peer to peer networking
+* Web crawlers
+* Finding "closest" matches/recommendations
+* Shortest path problems
+* * GPS Navigation
+* * Solving mazes
+* * AI (shortest path to win the game)
+
+### Depth First
+
+Explore as far as possible down one branch before "backtracking".
+
+### Breadth First
+
+Visit neighbors at current depth first!
