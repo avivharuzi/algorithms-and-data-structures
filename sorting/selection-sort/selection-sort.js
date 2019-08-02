@@ -1,8 +1,8 @@
 /**
  * Sorting the array using selection sort algorithm.
  *
- * @param {number[]} arr - The arr value.
- * @return {number[]} The sorted array.
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {

@@ -1,8 +1,8 @@
 /**
  * Returns the digit in num at the given i value.
  *
- * @param {number} num
- * @param {number} i
+ * @param {number} num - The num value.
+ * @param {number} i - The i value.
  * @return {number}
  */
 function getDigit(num, i) {
@@ -12,7 +12,7 @@ function getDigit(num, i) {
 /**
  * Returns the number of digits in num.
  *
- * @param {number} num
+ * @param {number} num - The num value.
  * @return {number}
  */
 function digitCount(num) {
@@ -26,39 +26,41 @@ function digitCount(num) {
 /**
  * Given an array of numbers, returns the number of digits in the largest numbers in the list.
  *
- * @param {array} nums
- * @return {array}
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
-function mostDigits(nums) {
+function mostDigits(arr) {
   let maxDigits = 0;
 
-  for (let i = 0; i < nums.length; i++) {
-    maxDigits = Math.max(maxDigits, digitCount(nums[i]));
+  for (let i = 0; i < arr.length; i++) {
+    maxDigits = Math.max(maxDigits, digitCount(arr[i]));
   }
 
   return maxDigits;
 }
 
 /**
- * @param {array} nums
- * @return {array}
+ * Sorting the array using radix sort algorithm.
+ *
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
-function radixSort(nums) {
-  const maxDigitCount = mostDigits(nums);
+function radixSort(arr) {
+  const maxDigitCount = mostDigits(arr);
 
   for (let i = 0; i < maxDigitCount; i++) {
     let digitBuckets = Array.from({ length: 10 }, () => []);
 
-    for (let j = 0; j < nums.length; j++) {
-      const digit = getDigit(nums[j], i);
+    for (let j = 0; j < arr.length; j++) {
+      const digit = getDigit(arr[j], i);
 
-      digitBuckets[digit].push(nums[j]);
+      digitBuckets[digit].push(arr[j]);
     }
 
-    nums = [].concat(...digitBuckets);
+    arr = [].concat(...digitBuckets);
   }
 
-  return nums;
+  return arr;
 }
 
 console.log(radixSort([23, 345, 5467, 12, 2345, 9852])); // [12, 23, 345, 2345, 5467, 9852]
