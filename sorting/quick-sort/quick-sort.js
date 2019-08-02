@@ -1,45 +1,57 @@
 /**
- * @param {array} arr
- * @param {number} start
- * @param {number} end
+ * Finding the index where the pivot should end up in the sorted array.
+ *
+ * @param {Array<number>} arr - The arr value.
+ * @param {number} start - The start value.
+ * @param {number} end - The end value.
  * @return {number}
  */
 function pivot(arr, start = 0, end = arr.length - 1) {
+  /**
+   * Swap betweeen two array values.
+   *
+   * @param {Array<number>} arr - The arr value.
+   * @param {number} i - The i value.
+   * @param {number} j - The j value.
+   */
   function swap(arr, i, j) {
     let temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
   }
 
-  // We are assuming the pivot is always the first element
-  let pivot = arr[start];
-  let swapIdx = start;
+  // We are assuming the pivot is always the first element.
+  let pivot = arr[start],
+    swapIndex = start;
 
   for (let i = start + 1; i <= end; i++) {
     if (pivot > arr[i]) {
-      swapIdx++;
-      swap(arr, swapIdx, i);
+      swapIndex++;
+      swap(arr, swapIndex, i);
     }
   }
 
-  // Swap the pivot from the start the swap point
-  swap(arr, start, swapIdx);
-  return swapIdx;
+  // Swap the pivot from the start the swap point.
+  swap(arr, start, swapIndex);
+  
+  return swapIndex;
 }
 
 /**
- * @param {array} arr
- * @return {array}
+ * Sorting the array using quick sort algorithm.
+ *
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function quickSort(arr, left = 0, right = arr.length - 1) {
   if (left < right) {
-    let pivotIdx = pivot(arr, left, right);
+    const pivotIndex = pivot(arr, left, right);
 
-    // Left
-    quickSort(arr, left, pivotIdx - 1);
+    // Left side.
+    quickSort(arr, left, pivotIndex - 1);
 
-    // Right
-    quickSort(arr, pivotIdx + 1, right);
+    // Right side.
+    quickSort(arr, pivotIndex + 1, right);
   }
 
   return arr;
