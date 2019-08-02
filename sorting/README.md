@@ -38,4 +38,4 @@ const swap = (arr, idx1, idx2) => {
 }
 ```
 
-![Sorting](images/sorting.png)
+![Sorting](/images/sorting.png)
