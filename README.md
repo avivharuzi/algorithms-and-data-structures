@@ -12,3 +12,5 @@ Implementation of Algorithms and Data Structures using JS.
 * [Sorting](sorting)
 * [Data Structures](data-structures)
 * [Dynamic Programming](dynamic-programming)
+
+![Algorithms And Data Structures](images/algorithms-and-data-structures.png)
