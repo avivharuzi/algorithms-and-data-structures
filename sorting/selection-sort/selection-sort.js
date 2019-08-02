@@ -1,6 +1,8 @@
 /**
- * @param {array} arr
- * @return {array}
+ * Sorting the array using selection sort algorithm.
+ *
+ * @param {number[]} arr - The arr value.
+ * @return {number[]} The sorted array.
  */
 function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -13,7 +15,7 @@ function selectionSort(arr) {
     }
 
     if (i !== lowest) {
-      // Swap numbers
+      // Swap numbers.
       const temp = arr[i];
       arr[i] = arr[lowest];
       arr[lowest] = temp;
