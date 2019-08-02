@@ -11,3 +11,4 @@ Data structures are collections of values, the relationships among them, and the
 * [Trees](trees)
 * [Hash Tables](hash-tables)
 * [Graphs](graphs)
+* [Dijkstra's Algorithm](dijkstras-algorithm)
