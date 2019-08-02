@@ -35,3 +35,5 @@ The logarithm of a number roughly measures the number of times you can divide th
 * O(n)
 * O(nlog n)
 * O(n^2)
+
+![Big O Notation](/images/big-o-notation.png)
