@@ -2,14 +2,14 @@
  * Returns the index which the value exists.
  * Otherwise, return -1.
  *
- * @param {array} arr
- * @param {string} val
+ * @param {Array<number>} arr - The arr value.
+ * @param {string} val - The val value.
  * @return {number}
  */
 function binarySearch(arr, val) {
-  let left = 0;
-  let right = arr.length - 1;
-  let middle = Math.floor((left + right) / 2);
+  let left = 0,
+    right = arr.length - 1,
+    middle = Math.floor((left + right) / 2);
 
   while (arr[middle] !== val && left <= right) {
     if (val < arr[middle]) {

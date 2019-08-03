@@ -1,8 +1,8 @@
 /**
  * Returns the number of times the short is inside the long string.
  *
- * @param {string} long
- * @param {string} short
+ * @param {string} long - The long value.
+ * @param {string} short - The short value.
  * @return {number}
  */
 function naiveSearch(long, short) {

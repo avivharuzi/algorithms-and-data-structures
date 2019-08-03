@@ -2,8 +2,8 @@
  * Returns the index at which the value exists.
  * If the value does not exist in the array, return -1.
  *
- * @param {array} arr
- * @param {string} val
+ * @param {Array} arr - The arr value.
+ * @param {*} val - The val value.
  * @returns {number}
  */
 function linearSearch(arr, val) {
