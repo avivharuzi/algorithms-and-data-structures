@@ -1,6 +1,8 @@
 /**
- * @param {array} arr
- * @return {array}
+ * Sorting the array using insertion sort algorithm.
+ *
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function insertionSort(arr) {
   let currentVal;
