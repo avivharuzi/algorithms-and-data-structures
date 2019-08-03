@@ -14,7 +14,7 @@ A problem is said to have optimal substructure if an optimal solution can be con
 
 Storing the results of expensive function calls and returning the cached result when the same inputs occur again.
 
-```javascript
+```js
 function fibonacci(num, memo = []) {
   if (memo[num] !== undefined) {
     return memo[num];
@@ -34,7 +34,7 @@ Storing the result of a previous result in a "table" (usually an array).
 Usually done using iteration.
 Better space complexity can be achieved using tabulation.
 
-```javascript
+```js
 function fibonacci(num) {
   if (num <= 2) {
     return 1;
