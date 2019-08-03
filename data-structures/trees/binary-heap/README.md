@@ -1,6 +1,6 @@
-# Binary Heaps
+# Binary Heap
 
-Very similar to a binary search tree, but with some different rules!
+Very similar to a binary search tree, but with some different rules.
 In a MaxBinaryHeap, parent nodes are always larger than child nodes.
 In a MinBinaryHeap, parent nodes are always smaller than child node.
 
@@ -8,7 +8,7 @@ In a MinBinaryHeap, parent nodes are always smaller than child node.
 
 * Each parent has at most two child nodes
 * The value of each parent node is always greater than its child nodes
-* In a max Binary Heap the parent is greater than the children, but there are no guarantees between sibling nodes.
+* In a max Binary Heap the parent is greater than the children, but there are no guarantees between sibling nodes
 * A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first
 
 ## Sink Down
@@ -19,7 +19,7 @@ The procedure for deleting the root from the heap (effectively extracting the ma
 
 A data structure where each element has a priority. Elements with higher priorities are served before elements with lower priorities.
 
-## Big O of Binary Heaps
+## Big O of Binary Heap
 
 * Insertion - O(log n)
 * Removal - O(log n)

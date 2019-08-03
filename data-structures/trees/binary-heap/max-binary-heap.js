@@ -1,17 +1,21 @@
 /**
+ * Class representing a max binary heap.
+ *
  * @class
  */
 class MaxBinaryHeap {
   /**
+   * Create a max binary heap.
+   *
    * @constructor
    */
   constructor() {
-    /** @member {array} */
+    /** @property {Array} */
     this.values = [];
   }
 
   /**
-   * @param {any} value
+   * @param {*} value - The value value.
    */
   insert(value) {
     this.values.push(value);

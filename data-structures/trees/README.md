@@ -5,8 +5,8 @@ Lists are linear and Trees are nonlinear.
 
 ## Content
 
-* [Binary Search Trees](binary-search-trees)
-* [Binary Heaps](binary-heaps)
+* [Binary Search Tree](binary-search-tree)
+* [Binary Heap](binary-heap)
 
 ## Tree Terminology
 

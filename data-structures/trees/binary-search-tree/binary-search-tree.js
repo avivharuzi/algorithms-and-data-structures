@@ -1,37 +1,45 @@
 /**
+ * Class representing a node.
+ *
  * @class
  */
 class Node {
   /**
+   * Create a node.
+   *
    * @constructor
-   * @param {any} value
+   * @param {*} value - The value value.
    */
   constructor(value) {
     this.value = value;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.left = null;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.right = null;
   }
 }
 
 /**
+ * Class representing a binary search tree.
+ *
  * @class
  */
 class BinarySearchTree {
   /**
+   * Create a binary search tree.
+   *
    * @constructor
    */
   constructor() {
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.root = null;
   }
 
   /**
    * Inserting a node into the binary search tree.
    *
-   * @param {any} value
-   * @return {undefined|BinarySearchTree}
+   * @param {*} value - The value value.
+   * @return {BinarySearchTree}
    */
   insert(value) {
     const newNode = new Node(value);
@@ -59,7 +67,7 @@ class BinarySearchTree {
 
         currentNode = currentNode.right;
       } else {
-        return undefined;
+        return;
       }
     }
   }
@@ -67,12 +75,12 @@ class BinarySearchTree {
   /**
    * Finding a node from binary search tree.
    *
-   * @param {any} value
-   * @return {undefined|Node}
+   * @param {*} value - The value value.
+   * @return {Node}
    */
   find(value) {
     if (this.root === null) {
-      return undefined;
+      return;
     }
 
     let currentNode = this.root,
@@ -89,16 +97,16 @@ class BinarySearchTree {
     }
 
     if (!isFound) {
-      return undefined;
+      return;
     }
 
     return currentNode;
   }
 
   /**
-   * Returns if binay search tree contain the given value.
+   * Returns if binary search tree contain the given value.
    *
-   * @param {any} value
+   * @param {*} value - The value value.
    * @return {boolean}
    */
   contains(value) {
@@ -122,7 +130,7 @@ class BinarySearchTree {
   }
 
   /**
-   * @return {array}
+   * @return {Array}
    */
   breadthFirstSearch() {
     let currentNode = this.root,
@@ -148,10 +156,10 @@ class BinarySearchTree {
   }
 
   /**
-   * @return {array}
+   * @return {Array}
    */
   depthFirstPreOrder() {
-    let data = [];
+    const data = [];
 
     function traverse(node) {
       data.push(node);
@@ -170,11 +178,11 @@ class BinarySearchTree {
     return data;
   }
 
-    /**
-   * @return {array}
+  /**
+   * @return {Array}
    */
   depthFirstPostOrder() {
-    let data = [];
+    const data = [];
 
     function traverse(node) {
       if (node.left !== null) {
@@ -193,11 +201,11 @@ class BinarySearchTree {
     return data;
   }
 
-      /**
-   * @return {array}
+  /**
+   * @return {Array}
    */
   depthFirstInOrder() {
-    let data = [];
+    const data = [];
 
     function traverse(node) {
       if (node.left !== null) {

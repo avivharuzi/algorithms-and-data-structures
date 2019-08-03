@@ -1,11 +1,15 @@
 /**
+ * Class representing a node.
+ *
  * @class
  */
 class Node {
   /**
+   * Create a node.
+   *
    * @constructor
-   * @param {any} value
-   * @param {number} priority
+   * @param {*} value - The value value.
+   * @param {number} priority - The priority value.
    */
   constructor(value, priority) {
     this.value = value;
@@ -14,20 +18,24 @@ class Node {
 }
 
 /**
+ * Class representing a priority queue.
+ *
  * @class
  */
 class PriorityQueue {
   /**
+   * Create a priority queue.
+   *
    * @constructor
    */
   constructor() {
-    /** @member {array} */
+    /** @property {Array} */
     this.values = [];
   }
 
   /**
-   * @param {any} value
-   * @param {number} priority
+   * @param {*} value - The value value.
+   * @param {number} priority - The priority value.
    */
   enqueue(value, priority) {
     const newNode = new Node(value, priority);
