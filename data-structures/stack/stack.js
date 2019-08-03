@@ -1,39 +1,47 @@
 /**
+ * Class representing a node.
+ *
  * @class
  */
 class Node {
   /**
+   * Create a node.
+   *
    * @constructor
-   * @param {any} value
+   * @param {*} value - The value value.
    */
   constructor(value) {
     this.value = value;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.next = null;
   }
 }
 
 /**
+ * Class representing a stack.
+ *
  * @class
  */
 class Stack {
   /**
+   * Create a stack.
+   *
    * @constructor
    */
   constructor() {
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.first = null;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.last = null;
-    /** @member {number} */
+    /** @property {number} */
     this.length = 0;
   }
 
   /**
    * Add a value to the top of the stack.
    *
-   * @param {any} value
-   * @return {nunber}
+   * @param {*} value - The value value.
+   * @return {number}
    */
   push(value) {
     const newNode = new Node(value);
@@ -53,7 +61,7 @@ class Stack {
   /**
    * Remove a value from the top of the stack.
    *
-   * @return {null|any}
+   * @return {null|*}
    */
   pop() {
     if (!this.first) {

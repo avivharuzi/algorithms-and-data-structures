@@ -1,20 +1,20 @@
-# Stacks
+# Stack
 
-A LIFO data structure!
+A LIFO data structure.
 The last element added to the stack will be the first element removed from the stack.
 
-## Where Stacks Are Used
+## Where Stack Is Used
 
 * Managing function invocations
 * Undo / Redo
-* Routing (the history object) is treated like a stack!
+* Routing (the history object) is treated like a stack
 
-## Building Stacks with Array
+## Building Stack with Array
 
 * push, pop
 * unshift, shift
 
-## Big O of Stacks
+## Big O of Stack
 
 * Insertion - O(1)
 * Removal - O(1)
