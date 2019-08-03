@@ -1,40 +1,48 @@
 /**
+ * Class representing a node.
+ *
  * @class
  */
 class Node {
   /**
+   * Create a node.
+   *
    * @constructor
-   * @param {any} value
+   * @param {*} value - The value value.
    */
   constructor(value) {
     this.value = value;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.next = null;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.prev = null;
   }
 }
 
 /**
+ * Class representing a doubly linked list.
+ *
  * @class
  */
 class DoublyLinkedList {
   /**
+   * Create a doubly linked list.
+   *
    * @constructor
    */
   constructor() {
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.head = null;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.tail = null;
-    /** @member {number} */
+    /** @property {number} */
     this.length = 0;
   }
 
   /**
    * Adding a node to the end of the Doubly Linked List.
    *
-   * @param {any} value
+   * @param {*} value - The value value.
    * @return {DoublyLinkedList}
    */
   push(value) {
@@ -57,14 +65,14 @@ class DoublyLinkedList {
   /**
    * Removing a node from the end of the Doubly Linked List.
    *
-   * @return {undefined|Node}
+   * @return {Node}
    */
   pop() {
     if (!this.head) {
-      return undefined;
+      return;
     }
 
-    let poppedNode = this.tail;
+    const poppedNode = this.tail;
 
     if (this.length === 1) {
       this.head = null;
@@ -83,11 +91,11 @@ class DoublyLinkedList {
   /**
    * Removing a node from the beginning of the Doubly Linked List.
    *
-   * @return {undefined|Node}
+   * @return {Node}
    */
   shift() {
     if (this.length === 0) {
-      return undefined;
+      return;
     }
 
     const oldHead = this.head;
@@ -109,7 +117,7 @@ class DoublyLinkedList {
   /**
    * Adding a node to the beginning of the Doubly Linked List.
    *
-   * @param {any} value
+   * @param {*} value - The value value.
    * @return {DoublyLinkedList}
    */
   unshift(value) {
@@ -132,15 +140,16 @@ class DoublyLinkedList {
   /**
    * Accessing a node in a Doubly Linked List by its position.
    *
-   * @param {number} index
-   * @return {null|Node}
+   * @param {number} index - The index value.
+   * @return {(null|Node)}
    */
   get(index) {
     if (index < 0 || index >= this.length) {
       return null;
     }
 
-    let counter, currentHead;
+    let counter,
+      currentHead;
 
     if (index <= this.length / 2) {
       counter = 0;
@@ -168,12 +177,12 @@ class DoublyLinkedList {
   /**
    * Replacing the value of a node to the in a Doubly Linked List.
    *
-   * @param {number} index
-   * @param {any} value
+   * @param {number} index - The index value.
+   * @param {*} value - The value value.
    * @return {boolean}
    */
   set(index, value) {
-    let foundNode = this.get(index);
+    const foundNode = this.get(index);
 
     if (!foundNode) {
       return false;
@@ -187,8 +196,8 @@ class DoublyLinkedList {
   /**
    * Adding a node in a Doubly Linked List by a certain position.
    *
-   * @param {number} index
-   * @param {any} value
+   * @param {number} index - The index value.
+   * @param {*} value - The value value.
    * @return {boolean}
    */
   insert(index, value) {
@@ -206,9 +215,9 @@ class DoublyLinkedList {
       return true;
     }
 
-    const newNode = new Node(value);
-    const beforeNode = this.get(index - 1);
-    const afterNode = beforeNode.next;
+    const newNode = new Node(value),
+      beforeNode = this.get(index - 1),
+      afterNode = beforeNode.next;
 
     beforeNode.next = newNode;
     newNode.prev = beforeNode;
@@ -223,12 +232,12 @@ class DoublyLinkedList {
   /**
    * Removing a node in a Doubly Linked List by a certain position.
    *
-   * @param {number} index
-   * @return {undefined|Node}
+   * @param {number} index - The index value.
+   * @return {Node}
    */
   remove(index) {
     if (index < 0 || index >= this.length) {
-      return undefined;
+      return;
     }
 
     if (index === 0) {
@@ -239,9 +248,9 @@ class DoublyLinkedList {
       return this.pop();
     }
 
-    const removedNode = this.get(index);
-    const beforeNode = removedNode.prev;
-    const afterNode = removedNode.next;
+    const removedNode = this.get(index),
+      beforeNode = removedNode.prev,
+      afterNode = removedNode.next;
 
     beforeNode.next = afterNode;
     afterNode.prev = beforeNode;
