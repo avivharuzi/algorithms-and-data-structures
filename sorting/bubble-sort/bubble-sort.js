@@ -1,8 +1,8 @@
 /**
- * Not optimized.
+ * Sorting the array using bubble sort algorithm not optimized.
  *
- * @param {array} arr
- * @return {array}
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function bubbleSort(arr) {
   for (let i = arr.length; i > 0; i--) {
@@ -22,10 +22,10 @@ function bubbleSort(arr) {
 console.log(bubbleSort([37, 45, 29, 8, 12, 88, 100, -3])); // [-3, 8, 12, 29, 37, 45, 88, 100]
 
 /**
- * Optimized with noSwaps
+ * Sorting the array using bubble sort algorithm optimized with no swaps.
  *
- * @param {array} arr
- * @return {array}
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function bubbleSort(arr) {
   for (let i = arr.length; i > 0; i--) {

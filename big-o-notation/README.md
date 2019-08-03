@@ -33,7 +33,7 @@ The logarithm of a number roughly measures the number of times you can divide th
 * O(1)
 * O(log n)
 * O(n)
-* O(nlog n)
+* O(n log n)
 * O(n^2)
 
-![Big O Notation](/images/big-o-notation.png)
+![Big O Notation](/images/big-o-notation.jpeg)
