@@ -1,8 +1,8 @@
-# Hash Tables
+# Hash Table
 
-Hash tables are used to store key-value pairs.
-They are like arrays, but the keys are not ordered.
-Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values!
+Hash table is used to store key-value pairs.
+Is like array, but the keys are not ordered.
+Unlike array, hash table is fast for all of the following operations: finding values, adding new values, and removing values.
 
 ## The Hash Function
 
@@ -19,7 +19,6 @@ A function that performs this task is called a hash function.
 ## Dealing with Collisions
 
 Even with a large array and a great hash function, collisions are inevitable.
-
 There are many strategies for dealing with collisions, but we'll focus on two:
 
 1. Separate Chaining
@@ -28,13 +27,11 @@ There are many strategies for dealing with collisions, but we'll focus on two:
 ### Separate Chaining
 
 With separate chaining, at each index in our array we store values using a more sophisticated data structure (e.g. an array or a linked list).
-
 This allows us to store multiple key-value pairs at the same index.
 
 ### Linear Probing
 
 With linear probing, when we find a collision, we search through the array to find the next empty slot.
-
 Unlike with separate chaining, this allows us to store a single key-value at each index.
 
 ## Set / Get
@@ -62,7 +59,7 @@ Unlike with separate chaining, this allows us to store a single key-value at eac
 
 1. Loops through the hash table array and returns an array of values in the table
 
-## Big O of Hash Tables
+## Big O of Hash Table
 
 1. Insert - O(1)
 2. Deletion - O(1)

@@ -1,19 +1,47 @@
+/**
+ * Class representing a hash table.
+ *
+ * @class
+ */
 class HashTable {
-  constructor(size=53){
+  /**
+   * Create a hash table.
+   *
+   * @constructor
+   * @param {number} [size=53] - The size value.
+   */
+  constructor(size = 53) {
+    /** @property {Array} */
     this.keyMap = new Array(size);
   }
 
+  /**
+   * Generate a hash from given key.
+   *
+   * @param {string} key - The key value.
+   * @return {number}
+   */
   _hash(key) {
+    const WEIRD_PRIME = 31;
+
     let total = 0;
-    let WEIRD_PRIME = 31;
+
     for (let i = 0; i < Math.min(key.length, 100); i++) {
-      let char = key[i];
-      let value = char.charCodeAt(0) - 96
+      const char = key[i],
+        value = char.charCodeAt(0) - 96;
+
       total = (total * WEIRD_PRIME + value) % this.keyMap.length;
     }
+
     return total;
   }
 
+  /**
+   * Set the key value into keyMap.
+   *
+   * @param {string} key - The key value.
+   * @param {*} value - The value value.
+   */
   set(key, value) {
     const index = this._hash(key);
 
@@ -24,6 +52,12 @@ class HashTable {
     this.keyMap[index].push([key, value]);
   }
 
+  /**
+   * Get the value from keyMap by key.
+   *
+   * @param {string} key - The key value.
+   * @return {*}
+   */
   get(key) {
     const index = this._hash(key);
 
@@ -35,11 +69,16 @@ class HashTable {
       }
     }
 
-    return undefined;
+    return;
   }
 
+  /**
+   * Returns all the keys from keyMap.
+   *
+   * @return {Array}
+   */
   keys() {
-    let keysArr = [];
+    const keysArr = [];
 
     for (let i = 0; i < this.keyMap.length; i++) {
       if (!this.keyMap[i]) {
@@ -58,8 +97,13 @@ class HashTable {
     return keysArr;
   }
 
+  /**
+   * Returns all the values from keyMap.
+   *
+   * @return {Array}
+   */
   values() {
-    let valuesArr = [];
+    const valuesArr = [];
 
     for (let i = 0; i < this.keyMap.length; i++) {
       if (!this.keyMap[i]) {
@@ -78,15 +122,3 @@ class HashTable {
     return valuesArr;
   }
 }
-
-
-let ht = new HashTable(17);
-ht.set("maroon","#800000")
-ht.set("yellow","#FFFF00")
-ht.set("olive","#808000")
-ht.set("salmon","#FA8072")
-ht.set("lightcoral","#F08080")
-ht.set("mediumvioletred","#C71585")
-ht.set("plum","#DDA0DD")
-ht.set("purple","#DDA0DD")
-ht.set("violet","#DDA0DD")
