@@ -4,8 +4,8 @@
  * Time Complexity - O(n^2).
  * Space Complexity - O(1).
  *
- * @param {array} arr
- * @return {array|undefined}
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function sumZero(arr) {
   for (let i = 0; i < arr.length; i++) {

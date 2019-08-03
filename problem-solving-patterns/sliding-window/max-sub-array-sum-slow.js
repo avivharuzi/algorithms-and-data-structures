@@ -2,8 +2,8 @@
  * Calculates the maximum sum of n consecutive elements in the array.
  * Time Complexity - O(n^2).
  *
- * @param {array} arr
- * @param {number} num
+ * @param {Array<number>} arr - The arr value.
+ * @param {number} num - The num value.
  * @return {number}
  */
 function maxSubarraySum(arr, num) {

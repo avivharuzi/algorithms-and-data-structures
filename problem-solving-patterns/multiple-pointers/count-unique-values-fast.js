@@ -3,7 +3,7 @@
  * There can be negative numbers in the array, but it will always be sorted.
  * Time Complexity - O(n).
  *
- * @param {array} values
+ * @param {Array<number>} values - The values value.
  * @return {number}
  */
 function countUniqueValues(arr) {

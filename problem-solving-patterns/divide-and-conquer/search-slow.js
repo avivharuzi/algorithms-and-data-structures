@@ -4,8 +4,8 @@
  * If the value is not found, return -1.
  * Time Complexity - O(n).
  *
- * @param {array} arr
- * @param {number} val
+ * @param {Array<number>} arr - The arr value.
+ * @param {number} val - The val value.
  * @return {number}
  */
 function search(arr, val) {

@@ -3,8 +3,8 @@
  * The frequency of values must be the same.
  * Time Complexity - O(n).
  *
- * @param {array} arr1
- * @param {array} arr2
+ * @param {Array<number>} arr1 - The arr1 value.
+ * @param {Array<number>} arr2 - The arr2 value.
  * @return {boolean}
  */
 function same(arr1, arr2) {
@@ -12,8 +12,8 @@ function same(arr1, arr2) {
     return false;
   }
 
-  let frequencyCounter1 = {};
-  let frequencyCounter2 = {};
+  const frequencyCounter1 = {},
+    frequencyCounter2 = {};
 
   for (let val of arr1) {
     frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;

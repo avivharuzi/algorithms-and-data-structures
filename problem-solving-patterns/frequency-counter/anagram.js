@@ -3,8 +3,8 @@
  * An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
  * Time Complexity - O(n).
  *
- * @param {string} first
- * @param {string} second
+ * @param {string} first - The first value.
+ * @param {string} second - The second value.
  * @return {boolean}
  */
 function validAnagram(first, second) {

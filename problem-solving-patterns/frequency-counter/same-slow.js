@@ -3,8 +3,8 @@
  * The frequency of values must be the same.
  * Time Complexity - O(n^2).
  *
- * @param {array} arr1
- * @param {array} arr2
+ * @param {Array<number>} arr1 - The arr1 value.
+ * @param {Array<number>} arr2 - The arr2 value.
  * @return {boolean}
  */
 function same(arr1, arr2) {

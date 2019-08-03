@@ -4,12 +4,12 @@
  * Time Complexity - O(n).
  * Space Complexity - O(1).
  *
- * @param {array} arr
- * @return {array|undefined}
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function sumZero(arr) {
-  let left = 0;
-  let right = arr.length - 1;
+  let left = 0,
+    right = arr.length - 1;
 
   while (left < right) {
     let sum = arr[left] + arr[right];

@@ -4,17 +4,17 @@
  * If the value is not found, return -1.
  * Time Complexity - O(log n).
  *
- * @param {array} arr
- * @param {number} val
+ * @param {Array<number>} arr - The arr value.
+ * @param {number} val - The val value.
  * @return {number}
  */
 function search(arr, val) {
-  let left = 0;
-  let right = arr.length - 1;
+  let left = 0,
+    right = arr.length - 1;
 
   while (left <= right) {
-    let middle = Math.floor((left + right) / 2);
-    let currentElement = arr[middle];
+    const middle = Math.floor((left + right) / 2),
+      currentElement = arr[middle];
 
     if (currentElement < val) {
       left = middle + 1;
