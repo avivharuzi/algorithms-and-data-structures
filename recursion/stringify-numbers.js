@@ -1,8 +1,8 @@
 /**
  * Finds all all of the values which are numbers and convert them to strings.
  *
- * @param {object} obj
- * @return {object}
+ * @param {Object} obj - The obj value.
+ * @return {Object}
  */
 function stringifyNumbers(obj) {
   const newObj = {};
@@ -20,7 +20,7 @@ function stringifyNumbers(obj) {
   return newObj;
 }
 
-let obj = {
+const obj = {
   num: 1,
   test: [],
   data: {

@@ -1,7 +1,7 @@
 /**
  * Returns a new string in reverse.
  *
- * @param {string} str
+ * @param {string} str - The str value.
  * @return {string}
  */
 function reverse(str) {

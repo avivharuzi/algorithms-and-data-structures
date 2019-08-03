@@ -2,8 +2,8 @@
  * Should return the power of the base to the exponent.
  * This function should mimic the functionality of Math.pow().
  *
- * @param {number} base
- * @param {number} exponent
+ * @param {number} base - The base value.
+ * @param {number} exponent - The exponent value.
  * @return {number}
  */
 function power(base, exponent) {

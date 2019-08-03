@@ -1,14 +1,14 @@
 /**
  * Helper method recursion.
  *
- * @param {array} arr
- * @return {array}
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function collectOddValues(arr) {
-  let result = []
+  const result = []
 
   /**
-   * @param {array} helperInput
+   * @param {Array<number>} helperInput
    */
   function helper(helperInput) {
     if (helperInput.length === 0) {
@@ -32,8 +32,8 @@ console.log(collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9])); // [1, 3, 5, 7, 9]
 /**
  * Pure recursion.
  *
- * @param {array} arr
- * @return {array}
+ * @param {Array<number>} arr - The arr value.
+ * @return {Array<number>}
  */
 function collectOddValues(arr) {
   let newArr = [];

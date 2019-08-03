@@ -1,7 +1,7 @@
 /**
- * Adds up all the numbers from 0 to the number passed to the function
+ * Adds up all the numbers from 0 to the number passed to the function.
  *
- * @param {number} num
+ * @param {number} num - The num value.
  * @return {number}
  */
 function recursiveRange(num) {

@@ -1,7 +1,7 @@
 /**
  * Sum numbers starting from num using recursion.
  *
- * @param {number} num
+ * @param {number} num - The num value.
  * @return {number}
  */
 function sumRange(num) {

@@ -1,7 +1,7 @@
 # Recursion
 
 A process (a function in our case) that calls itself.
-Invoke the same function with a different input until you reach your base case!
+Invoke the same function with a different input until you reach your base case.
 
 ## Base Case
 
@@ -10,8 +10,8 @@ The condition when the recursion ends.
 ## Where things go wrong
 
 * No base case
-* Forgetting to return or returning the wrong thing!
-* Stack overflow!
+* Forgetting to return or returning the wrong thing
+* Stack overflow
 
 ## Pure Recursion Tips
 

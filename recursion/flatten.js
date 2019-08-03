@@ -1,8 +1,8 @@
 /**
  * Accepts an array of arrays and returns new array with all values flattened.
  *
- * @param {array} oldArr
- * @return {array}
+ * @param {Array} oldArr - The oldArr value.
+ * @return {Array}
  */
 function flatten(oldArr) {
   let newArr = [];
@@ -18,7 +18,7 @@ function flatten(oldArr) {
   return newArr;
 }
 
-console.log(flatten([1, 2, 3, [4, 5] ])); // [1, 2, 3, 4, 5]
+console.log(flatten([1, 2, 3, [4, 5]])); // [1, 2, 3, 4, 5]
 console.log(flatten([1, [2, [3, 4], [[5]]]])); // [1, 2, 3, 4, 5]
-console.log(flatten([[1],[2],[3]])); // [1, 2, 3]
+console.log(flatten([[1], [2], [3]])); // [1, 2, 3]
 console.log(flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])); // [1, 2, 3]

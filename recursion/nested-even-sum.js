@@ -1,7 +1,7 @@
 /**
  * Return the sum of all event numbers in an object which may contain nested objects.
  *
- * @param {object} obj
+ * @param {Object} obj - The obj value.
  * @return {number}
  */
 function nestedEvenSum(obj) {

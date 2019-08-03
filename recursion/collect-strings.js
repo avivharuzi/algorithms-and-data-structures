@@ -1,11 +1,11 @@
 /**
  * Returns an array of all the values in the object that have typeof string.
  *
- * @param {object} obj
- * @return {array}
+ * @param {Object} obj - The obj value.
+ * @return {Array<string>}
  */
 function collectStrings(obj) {
-  let stringsArr = [];
+  const stringsArr = [];
 
   function gatherStrings(o) {
     for (let key in o) {

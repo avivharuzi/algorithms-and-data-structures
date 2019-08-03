@@ -1,7 +1,7 @@
 /**
  * Count down numbers from given number until 1.
  *
- * @param {number} num
+ * @param {number} num - The num value.
  */
 function countDown(num){
   if (num <= 0) {

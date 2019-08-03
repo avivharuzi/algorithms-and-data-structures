@@ -1,8 +1,8 @@
 /**
  * Given an array of strings, capitalize the first letter of each string in the array.
  *
- * @param {array} arr
- * @return {array}
+ * @param {Array<string>} arr - The arr value.
+ * @return {Array<string>}
  */
 function capitalizeFirst(arr) {
   if (arr.length === 1) {
