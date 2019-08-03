@@ -4,13 +4,13 @@ Data structures are collections of values, the relationships among them, and the
 
 ## Content
 
-* [Singly Linked Lists](singly-linked-lists)
-* [Doubly Linked Lists](doubly-linked-lists)
-* [Stacks](stacks)
-* [Queues](queues)
+* [Singly Linked List](singly-linked-list)
+* [Doubly Linked List](doubly-linked-list)
+* [Stack](stack)
+* [Queue](queue)
 * [Trees](trees)
-* [Hash Tables](hash-tables)
-* [Graphs](graphs)
+* [Hash Table](hash-table)
+* [Graph](graph)
 * [Dijkstra's Algorithm](dijkstras-algorithm)
 
 ![Data Structures](/images/data-structures.png)
