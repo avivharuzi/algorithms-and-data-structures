@@ -1,24 +1,57 @@
+/**
+ * Class representing a graph.
+ *
+ * @class
+ */
 class Graph {
+  /**
+   * Create a graph.
+   *
+   * @constructor
+   */
   constructor() {
+    /** @property {Object} */
     this.adjacencyList = {};
   }
 
+  /**
+   * Add vertex to adjacencyList.
+   *
+   * @param {*} vertex - The vertex value.
+   */
   addVertex(vertex) {
     if (!this.adjacencyList[vertex]) {
       this.adjacencyList[vertex] = [];
     }
   }
 
+  /**
+   * Add connection between two vertices.
+   *
+   * @param {*} vertex1 - The vertex1 value.
+   * @param {*} vertex2 - The vertex2 value.
+   */
   addEdge(vertex1, vertex2) {
     this.adjacencyList[vertex1].push(vertex2);
     this.adjacencyList[vertex2].push(vertex1);
   }
 
+  /**
+   * Remove connection between two vertices.
+   *
+   * @param {*} vertex1 - The vertex1 value.
+   * @param {*} vertex2 - The vertex2 value.
+   */
   removeEdge(vertex1, vertex2) {
     this.adjacencyList[vertex1] = this.adjacencyList[vertex1].filter(v => v !== vertex2);
     this.adjacencyList[vertex2] = this.adjacencyList[vertex2].filter(v => v !== vertex1);
   }
 
+  /**
+   * Remove vertex from adjacencyList.
+   *
+   * @param {*} vertex - The vertex value.
+   */
   removeVertex(vertex) {
     while (this.adjacencyList[vertex].length) {
       const adjacencyVertex = this.adjacencyList[vertex].pop();
@@ -28,10 +61,16 @@ class Graph {
     delete this.adjacencyList[vertex];
   }
 
+  /**
+   * Implements depth first recursive in a graph.
+   *
+   * @param {*} startVertex - The startVertex value.
+   * @return {null|*}
+   */
   depthFirstRecursive(startVertex) {
-    const result = [];
-    const visited = {};
-    const adjacencyList = this.adjacencyList;
+    const result = [],
+      visited = {},
+      adjacencyList = this.adjacencyList;
 
     function dfs(vertex) {
       if (!vertex) {
@@ -54,10 +93,17 @@ class Graph {
     return result;
   }
 
+  /**
+   * Implements depth first iterative in a graph.
+   *
+   * @param {*} startVertex - The startVertex value.
+   * @return {*}
+   */
   depthFirstIterative(startVertex) {
-    const stack = [startVertex];
-    const result = [];
-    const visited = {};
+    const result = [],
+      visited = {},
+      stack = [startVertex];
+
     let currentVertex;
 
     visited[startVertex] = true;
@@ -77,10 +123,17 @@ class Graph {
     return result;
   }
 
+  /**
+   * Implements breadth first in a graph.
+   *
+   * @param {*} startVertex - The startVertex value.
+   * @return {*}
+   */
   breadthFirst(startVertex) {
-    const queue = [startVertex];
-    const result = [];
-    const visited = {};
+    const result = [],
+      visited = {},
+      queue = [startVertex];
+
     let currentVertex;
 
     while (queue.length) {
@@ -98,16 +151,3 @@ class Graph {
     return result;
   }
 }
-
-let g = new Graph();
-g.addVertex("Dallas");
-g.addVertex("Tokyo");
-g.addVertex("Aspen");
-g.addVertex("Los Angeles");
-g.addVertex("Hong Kong")
-g.addEdge("Dallas", "Tokyo");
-g.addEdge("Dallas", "Aspen");
-g.addEdge("Hong Kong", "Tokyo");
-g.addEdge("Hong Kong", "Dallas");
-g.addEdge("Los Angeles", "Hong Kong");
-g.addEdge("Los Angeles", "Aspen");
