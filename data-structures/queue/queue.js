@@ -1,39 +1,47 @@
 /**
+ * Class representing a node.
+ *
  * @class
  */
 class Node {
   /**
+   * Create a node.
+   *
    * @constructor
-   * @param {any} value
+   * @param {*} value - The value value.
    */
   constructor(value) {
     this.value = value;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.next = null;
   }
 }
 
 /**
+ * Class representing a queue.
+ *
  * @class
  */
 class Queue {
   /**
+   * Create a queue.
+   *
    * @constructor
    */
   constructor() {
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.first = null;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.last = null;
-    /** @member {number} */
+    /** @property {number} */
     this.length = 0;
   }
 
   /**
    * Adding to the beginning of the Queue.
    *
-   * @param {any} value
-   * @return {number}
+   * @param {*} value - The value value.
+   * @return {number
    */
   enqueue(value) {
     const newNode = new Node(value);
@@ -52,7 +60,7 @@ class Queue {
   /**
    * Removing from the beginning of the Queue.
    *
-   * @return {null|any}
+   * @return {null|*}
    */
   dequeue() {
     if (!this.first) {

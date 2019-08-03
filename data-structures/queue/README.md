@@ -1,14 +1,14 @@
-# Queues
+# Queue
 
-A FIFO data structure!
+A FIFO data structure.
 First In First Out.
 
-## Building Queues with Array
+## Building Queue with Array
 
 * push, shift
 * unshift, pop
 
-## Big O of Queues
+## Big O of Queue
 
 * Insertion - O(1)
 * Removal - O(1)
