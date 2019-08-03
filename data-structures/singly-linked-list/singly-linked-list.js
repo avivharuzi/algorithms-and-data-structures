@@ -1,38 +1,46 @@
 /**
+ * Class representing a node.
+ *
  * @class
  */
 class Node {
   /**
+   * Create a node.
+   *
    * @constructor
-   * @param {any} value
+   * @param {*} value - The value value.
    */
   constructor(value) {
     this.value = value;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.next = null;
   }
 }
 
 /**
+ * Class representing a singly linked list.
+ *
  * @class
  */
 class SinglyLinkedList {
   /**
+   * Create a singly linked list.
+   *
    * @constructor
    */
   constructor() {
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.head = null;
-    /** @member {null|Node} */
+    /** @property {(null|Node)} */
     this.tail = null;
-    /** @member {number} */
+    /** @property {number} */
     this.length = 0;
   }
 
   /**
    * Adding a new node to the end of the Linked List.
    *
-   * @param {any} value
+   * @param {*} value - The value value.
    * @return {SinglyLinkedList}
    */
   push(value) {
@@ -54,17 +62,17 @@ class SinglyLinkedList {
   /**
    * Removing a node from the end of the Linked List.
    *
-   * @return {undefined|Node}
+   * @return {Node}
    */
   pop() {
     if (!this.head) {
-      return undefined;
+      return;
     }
 
-    let currentHead = this.head;
-    let newTail = current;
+    let currentHead = this.head,
+      newTail = currentHead;
 
-    while (current.next) {
+    while (currentHead.next) {
       newTail = currentHead;
       currentHead = currentHead.next;
     }
@@ -85,14 +93,14 @@ class SinglyLinkedList {
   /**
    * Removing a new node from the beginning of the Linked List.
    *
-   * @return {undefined|Node}
+   * @return {Node}
    */
   shift() {
     if (!this.head) {
-      return undefined;
+      return;
     }
 
-    let currentHead = this.head;
+    const currentHead = this.head;
     this.head = currentHead.next;
 
     this.length--;
@@ -107,11 +115,11 @@ class SinglyLinkedList {
   /**
    * Adding a new node to the beginning of the Linked List.
    *
-   * @param {any} value
-   * @return {undefined|Node}
+   * @param {*} value - The value value.
+   * @return {SinglyLinkedList}
    */
   unshift(value) {
-    let newNode = new Node(value);
+    const newNode = new Node(value);
 
     if (!this.head) {
       this.head = newNode;
@@ -129,16 +137,16 @@ class SinglyLinkedList {
   /**
    * Retrieving a node by it's position in the Linked List.
    *
-   * @param {number} index
-   * @return {null|Node}
+   * @param {number} index - The index value.
+   * @return {(null|Node)}
    */
   get(index) {
     if (index < 0 || index >= this.length) {
       return null;
     }
 
-    let counter = 0;
-    let currentHead = this.head;
+    let counter = 0,
+      currentHead = this.head;
 
     while (counter !== index) {
       currentHead = currentHead.next;
@@ -151,12 +159,12 @@ class SinglyLinkedList {
   /**
    * Changing the value of a node based on it's position in the Linked List.
    *
-   * @param {number} index
-   * @param {any} value
+   * @param {number} index - The index value.
+   * @param {*} value - The value value.
    * @return {boolean}
    */
   set(index, value) {
-    let foundNode = this.get(index);
+    const foundNode = this.get(index);
 
     if (!foundNode) {
       return false;
@@ -170,8 +178,8 @@ class SinglyLinkedList {
   /**
    * Adding a node to the Linked List at a specific position.
    *
-   * @param {number} index
-   * @param {any} value
+   * @param {number} index - The index value.
+   * @param {*} value - The value value.
    * @return {boolean}
    */
   insert(index, value) {
@@ -189,9 +197,9 @@ class SinglyLinkedList {
       return true;
     }
 
-    let newNode = new Node(value);
-    let prevNode = this.get(index - 1);
-    let prevNodeNext = prevNode.next;
+    const newNode = new Node(value),
+      prevNode = this.get(index - 1),
+      prevNodeNext = prevNode.next;
 
     prevNode.next = newNode;
     newNode.next = prevNodeNext;
@@ -204,12 +212,12 @@ class SinglyLinkedList {
   /**
    * Removing a node from the Linked List at a specific position.
    *
-   * @param {number} index
-   * @return {undefined|Node}
+   * @param {number} index - The index value.
+   * @return {Node}
    */
   remove(index) {
     if (index < 0 || index >= this.length) {
-      return undefined;
+      return;
     }
 
     if (index === this.length - 1) {
@@ -220,8 +228,9 @@ class SinglyLinkedList {
       return this.shift();
     }
 
-    let prevNode = this.get(index - 1);
-    let removedNode = prevNode.next;
+    const prevNode = this.get(index - 1),
+      removedNode = prevNode.next;
+
     prevNode.next = removedNode.next;
 
     this.length--;
@@ -239,8 +248,8 @@ class SinglyLinkedList {
     this.head = this.tail;
     this.tail = currentHead;
 
-    let nextHead;
-    let prevHead;
+    let nextHead,
+      prevHead;
 
     for (let i = 0; i < this.length; i++) {
       nextHead = currentHead.next;
