@@ -1,6 +1,7 @@
 # Trees
 
 A data structure that consists of nodes in a parent / child relationship.
+
 Lists are linear and Trees are nonlinear.
 
 ## Content

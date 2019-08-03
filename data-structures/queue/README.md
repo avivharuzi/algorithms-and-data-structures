@@ -1,6 +1,7 @@
 # Queue
 
 A FIFO data structure.
+
 First In First Out.
 
 ## Building Queue with Array
